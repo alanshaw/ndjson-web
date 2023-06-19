@@ -36,5 +36,13 @@
     "ignore": [
       "*.ts"
     ]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alanshaw/ndjson-web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alanshaw/ndjson-web/issues"
+  },
+  "homepage": "https://github.com/alanshaw/ndjson-web#readme"
 }
