@@ -1,0 +1,40 @@
+{
+  "name": "ndjson-web",
+  "version": "0.0.0",
+  "description": "NDJSON parser + serializer using web streams",
+  "main": "index.js",
+  "type": "module",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "entail",
+    "coverage": "c8 npm test",
+    "lint": "standard"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "keywords": [
+    "ndjson",
+    "newline",
+    "delimited",
+    "json",
+    "parse",
+    "serialize",
+    "stringify",
+    "encode",
+    "decode"
+  ],
+  "author": "Alan Shaw",
+  "license": "Apache-2.0 OR MIT",
+  "devDependencies": {
+    "c8": "^8.0.0",
+    "entail": "^2.0.0",
+    "standard": "^17.1.0"
+  },
+  "standard": {
+    "ignore": [
+      "*.ts"
+    ]
+  }
+}
