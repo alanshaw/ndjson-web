@@ -1,6 +1,6 @@
 {
   "name": "ndjson-web",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "NDJSON parser + serializer using web streams",
   "main": "index.js",
   "type": "module",
