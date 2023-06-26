@@ -1,5 +1,6 @@
 /* eslint-env browser */
 /* global TextDecoderStream */
+import * as dagJSON from '@ipld/dag-json'
 import { Parse, Stringify } from './index.js'
 
 /**
@@ -78,6 +79,20 @@ export const test = {
     await source
       .pipeThrough(new Parse())
       .pipeThrough(new Stringify())
+      .pipeThrough(new TextDecoderStream())
+      .pipeTo(new WritableStream({ write: (item) => { results.push(item) } }))
+
+    assert.equal(results.join(''), input)
+  },
+
+  'should custom parser and siringifier': async assert => {
+    const input = '{"id":1}\n{"id":2}\n{"id":3}\n'
+    const source = toParseSource([input])
+    const results = []
+
+    await source
+      .pipeThrough(new Parse(dagJSON.parse))
+      .pipeThrough(new Stringify(dagJSON.stringify))
       .pipeThrough(new TextDecoderStream())
       .pipeTo(new WritableStream({ write: (item) => { results.push(item) } }))
 

@@ -28,6 +28,7 @@
   "author": "Alan Shaw",
   "license": "Apache-2.0 OR MIT",
   "devDependencies": {
+    "@ipld/dag-json": "^10.1.2",
     "c8": "^8.0.0",
     "entail": "^2.0.0",
     "standard": "^17.1.0"
